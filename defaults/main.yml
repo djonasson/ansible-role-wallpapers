@@ -1,0 +1,7 @@
+---
+wallpapers_dir: "~/wallpapers"
+bin_dir: "~/.local/bin"
+script_name: rotate_wallpaper
+cron_weekday: "*"
+cron_hour: "*"
+cron_minute: "0"

@@ -1,0 +1,29 @@
+---
+- name: Make sure the wallpapers directory exists.
+  ansible.builtin.file:
+    path: "{{ wallpapers_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: Make sure the bin directory exists.
+  ansible.builtin.file:
+    path: "{{ bin_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: Create script for rotating wallpapers.
+  ansible.builtin.copy:
+    dest: "{{ bin_dir }}/{{ script_name }}"
+    content: |
+      #!/bin/sh
+      /usr/bin/find {{ wallpapers_dir }} -type f | /usr/bin/shuf -n1 |  /usr/bin/xargs -n 1 -i /bin/sh -c 'v="{}"; /usr/bin/gsettings set org.gnome.desktop.background picture-uri "file://$v"'
+    mode: 0744
+
+- name: Call the rotate wallpaper script with cron.
+  ansible.builtin.cron:
+    name: "Rotate wallpaper"
+    weekday: "{{ cron_weekday }}"
+    hour: "{{ cron_hour }}"
+    minute: "{{ cron_minute }}"
+    job: "{{ bin_dir }}/{{ script_name }}"
+    state: present

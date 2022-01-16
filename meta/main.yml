@@ -1,0 +1,19 @@
+---
+dependencies: []
+
+galaxy_info:
+  role_name: wallpapers
+  author: djonasson
+  description: Ansible role for rotating Gnome desktop background images with a scheduled cron job.
+  license: "MIT"
+  min_ansible_version: 2.8
+  platforms:
+    - name: Ubuntu
+      versions:
+        - 21.10
+        - 21.04
+        - 20.04
+  galaxy_tags:
+    - configuration
+    - gnome
+    - ubuntu
