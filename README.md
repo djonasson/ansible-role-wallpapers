@@ -1,6 +1,7 @@
 # Ansible Role: Wallpapers
 
-[![CI](https://github.com/djonasson/ansible-role-wallpapers/workflows/CI/badge.svg?event=push)](https://github.com/djonasson/ansible-role-wallpapers/actions?query=workflow%3ACI) [![Ansible Galaxy](https://img.shields.io/ansible/role/d/57604)](https://galaxy.ansible.com/djonasson/wallpapers/) [![Ansible Galaxy Quality Score](https://img.shields.io/ansible/quality/57604)](https://galaxy.ansible.com/djonasson/wallpapers/)
+[![CI](https://github.com/djonasson/ansible-role-wallpapers/workflows/CI/badge.svg?event=push)](https://github.com/djonasson/ansible-role-wallpapers/actions?query=workflow%3ACI) [![Ansible Galaxy Quality Score](https://img.shields.io/ansible/quality/57604)](https://galaxy.ansible.com/djonasson/wallpapers/) [![Ansible Galaxy](https://img.shields.io/ansible/role/d/57604)](https://galaxy.ansible.com/djonasson/wallpapers/) [![MIT Licence](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/djonasson/ansible-role-wallpapers/blob/main/README.md)
+
 
 Ansible role for rotating Gnome desktop background images with a scheduled cron job.
 
