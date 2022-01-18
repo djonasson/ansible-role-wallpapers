@@ -5,6 +5,9 @@
 
 Ansible role for rotating Gnome desktop background images with a scheduled cron job.
 
+It creates a `~/wallpapers` directory be default and randomly rotates the background with images from this directory
+with a cron job. See the variables section below for options.
+
 ## Requirements
 
 Requires `gsettings`, `find`, `shuf` and `xargs` on the managed machine. If not present they will be installed
