@@ -1,4 +1,19 @@
 ---
+- name: Make sure that the findutils package is installed (for find and xargs).
+  apt:
+    name: findutils
+    state: present
+
+- name: Make sure that the coreutils package is installed (for shuf).
+  apt:
+    name: findutils
+    state: present
+
+- name: Make sure that the libglib2.0-bin package is installed (for gsettings).
+  apt:
+    name: libglib2.0-bin
+    state: present
+
 - name: Make sure the wallpapers directory exists.
   ansible.builtin.file:
     path: "{{ wallpapers_dir }}"
@@ -21,7 +36,7 @@
 
 - name: Call the rotate wallpaper script with cron.
   ansible.builtin.cron:
-    name: "Rotate wallpaper"
+    name: "Rotate wallpaper."
     weekday: "{{ cron_weekday }}"
     hour: "{{ cron_hour }}"
     minute: "{{ cron_minute }}"

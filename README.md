@@ -6,7 +6,8 @@ Ansible role for rotating Gnome desktop background images with a scheduled cron 
 
 ## Requirements
 
-Requires `gsettings`, `find`, `shuf` and `xargs` on the managed machine.
+Requires `gsettings`, `find`, `shuf` and `xargs` on the managed machine. If not present they will be installed
+automatically.
 
 ## Role Variables
 
