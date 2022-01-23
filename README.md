@@ -38,7 +38,7 @@ Cron parameters for controlling when the rotation takes place. See the [Ansible 
 
 ## Dependencies
 
-None
+None.
 
 ## Example Playbook
 

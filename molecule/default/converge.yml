@@ -10,7 +10,7 @@
     - name: Install git.
       apt:
         name: git
-        state: latest
+        state: present
 
   roles:
     - role: djonasson.wallpapers
