@@ -1,16 +1,16 @@
 ---
 - name: Make sure that the findutils package is installed (for find and xargs).
-  apt:
+  ansible.builtin.apt:
     name: findutils
     state: present
 
 - name: Make sure that the coreutils package is installed (for shuf).
-  apt:
+  ansible.builtin.apt:
     name: findutils
     state: present
 
 - name: Make sure that the libglib2.0-bin package is installed (for gsettings).
-  apt:
+  ansible.builtin.apt:
     name: libglib2.0-bin
     state: present
 
